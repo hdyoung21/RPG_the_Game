@@ -5,6 +5,7 @@ const Armor = require('./Armor');
 const Dead = require('./Dead');
 const Monster = require('./Monster');
 
+// Define associations between models using Sequelize's associations
 User.hasMany(Character, {
     foreignKey: 'user_id'
 });
@@ -45,6 +46,7 @@ Character.belongsTo(Armor, {
     foreignKey: 'armor_id'
 });
 
+// Export all models as an object
 module.exports = {
     User,
     Character,
